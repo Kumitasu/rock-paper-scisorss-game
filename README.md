@@ -8,7 +8,9 @@
 
 
 ## Technologies Used
-- Pure JS
+- JS
+- Css
+- Html
 
 
 ## Project Status 
