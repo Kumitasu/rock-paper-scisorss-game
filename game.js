@@ -1,4 +1,3 @@
- // Zobacz gotowy projekt: https://websamuraj.pl/examples/js/projekt7/
 
 const gameSummary = {
  numbers: 0,
@@ -14,7 +13,7 @@ const game = {
 
 const hands = [...document.querySelectorAll('.select img')];
 
-// Pierwsza funkcja
+
 function handSelection() {
 
  game.playerHand = this.dataset.option
@@ -23,20 +22,15 @@ function handSelection() {
  this.style.boxShadow = '0 0 0 4px #a488b3';
 }
 
-// const handSelection = (e) => {
-//  // this - nie tworzy
-//  console.log(e.target);
-//  console.log(e.currentTarget);
-// }
 
-// Funkcja określająca wybór komputera
+
 function aiChoice() {
  return hands[Math.floor(Math.random() * 3)].dataset.option;
 }
 
-// Funkcja zwracajająca informacje o wyniku gry
+
 function checkResult(player, ai) {
- // console.log(player, ai);
+
  if (player === ai) {
   return 'draw';
  } else if ((player === "paper" && ai === "rock") || (player === "rock" && ai === "scissors") || (player === "scissors" && ai === "paper")) {
@@ -44,7 +38,7 @@ function checkResult(player, ai) {
  } else { return 'loss'; }
 }
 
-// Publikacja wyniku
+
 
 function publishResult(player, ai, result) {
  document.querySelector('[data-summary="your-choice"]').textContent = player;
@@ -70,7 +64,7 @@ function publishResult(player, ai, result) {
   document.querySelector('[data-summary="who-win"]').style.color = "#ad92b9";
  }
 }
-//funkcja sterująca
+
 function startGame() {
  if (!game.playerHand) {
   return alert("Pick a hand");
